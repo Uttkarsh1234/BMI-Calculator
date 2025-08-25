@@ -27,10 +27,14 @@
     <div id="result">
       <% if(bmi === null) { %>
         <p>Check Your Body Index</p>
-      <%  } else if(bmi < 18.5 ) { %>
+      <%  } else if(bmi < 18.5) { %>
         <P> <%= bmi %> , You are Underweight</P>
+      <% } else if(bmi >= 18.5 && bmi < 24.9) { %>
+        <p> <%= bmi %> , Normal</p>
+      <% } else if(bmi >= 25 && bmi < 29.9) { %>
+        <p> <%= bmi %> , Overweight</p>
       <% } else { %>
-        <p> <%= bmi %> , You are Healthy</p>
+        <p> <%= bmi %> , Obses</p>
       <% } %>
     </div>
   </div>
